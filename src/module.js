@@ -1,7 +1,8 @@
 'use strict';
 
 var carrouselApp = angular.module('CarrouselApp', [
-	'appControllers',	
+	'appControllers',
+	'appDirectives',
 	'ngRoute',
 	'ngAnimate',
 	'ngTouch'
