@@ -1,6 +1,64 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
+
+.dm-car-box {
+	position: relative;
+}
+ul.dm-car {
+	display: block;
+	width: 600px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	
+	li {
+		display: block;
+		position: absolute;
+		top:0;
+		left: 600px;
+		width: 600px;
+		height: 300px;
+		img {
+			width: 100%
+		}
+		&.current {
+			left: 0;
+			
+		}
+		&.next {
+			left: 600px;
+		}
+		
+		&.prev {
+			left: -600px;
+		}
+	}
+}
+
+.dm-car-controls {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 600px;
+	height: 300px;
+	
+	.dm-car-control {
+		display: inline-block;
+		width: 50px;
+		height: 300px;
+		line-height: 300px;
+		text-align: center;
+		background-color: #ccc;
+		background-color: rgba(30,30,30,.37);
+		position: absolute;
+		color: white;
+		font-size: 24px;
+		font-weight: bold;
+		
+		&.dm-car-control-next {
+			right: 0px;
+		}
+	}	
+	
+}
+

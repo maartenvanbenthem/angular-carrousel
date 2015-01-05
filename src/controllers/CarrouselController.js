@@ -4,10 +4,8 @@ appControllers.controller('CarrouselCtrl', ['$scope',
 				
 		$scope.imageData = [];
 		
-		generateTestImageData($scope.imageData,20);
-		
-		console.log($scope.imageData.length);
-		
+		generateTestImageData($scope.imageData,4);
+				
 		function generateTestImageData(imageDataObject,length) {
 		
 			for (var i=0; i < length; i++) {
