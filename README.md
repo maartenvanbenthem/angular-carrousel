@@ -6,7 +6,7 @@ A lazy loading image carrousel
 ## Todo :
  - ~~basic setup~~
  - create the carrousel directive
- 	- ~~carrousel mechanism ~~
+ 	- ~~carrousel mechanism~~
  	- ~~lazyloading~~
  	- updating css for animation
  	- converting css to js for rotating images?
