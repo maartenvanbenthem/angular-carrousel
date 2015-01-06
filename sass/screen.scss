@@ -1,4 +1,5 @@
 @import "compass/reset";
+@import "compass/css3/transition";
 
 .dm-car-box {
 	position: relative;
@@ -14,6 +15,7 @@ ul.dm-car {
 		display: block;
 		position: absolute;
 		top:0;
+		@include transition(left 500ms ease-out);
 		left: 600px;
 		width: 600px;
 		height: 300px;
@@ -22,6 +24,7 @@ ul.dm-car {
 		}
 		&.current {
 			left: 0;
+			@include transition(left 500ms ease-out);
 			
 		}
 		&.next {
@@ -30,6 +33,7 @@ ul.dm-car {
 		
 		&.prev {
 			left: -600px;
+			@include transition(left 500ms ease-out);
 		}
 	}
 }
