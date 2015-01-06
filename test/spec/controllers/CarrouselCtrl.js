@@ -2,28 +2,27 @@ describe('Unit: CarrousselCtrl', function() {
   
   beforeEach(module('CarrouselApp'));
   
-  var $controller;
-
-  beforeEach(inject(function(_$controller_){
-    // The injector unwraps the underscores (_) from around the parameter names when matching
-    $controller = _$controller_;
+  var ctrl, scope;
+  // inject the $controller and $rootScope services
+  // in the beforeEach block
+  beforeEach(inject(function($controller, $rootScope) {
+    // Create a new scope that's a child of the $rootScope
+    scope = $rootScope.$new();
+    // Create the controller
+    ctrl = $controller('CarrousselCtrl', {
+      $scope: scope
+    });
   }));
   
   it('should generate an image data object', 
     function() {
-		var $scope = {};
-		var controller = $controller('CarrousselCtrl', { $scope: $scope });
-		expect($scope.imageData).toBeDefined();
-		//scope.testFunction();
-      //expect(scope.test).toEqual(true);
+      expect(scope.imageData).toBeDefined();
   });
   
   it('should have test object', 
     function() {
-    	var $scope = {};
-		var controller = $controller('CarrousselCtrl', { $scope: $scope });
-		$scope.testFunction();
-		expect($scope.test).toEqual("test");
+      scope.testFunction();
+      expect(scope.test).toEqual("test");
   });
   
   
