@@ -25,15 +25,18 @@ ul.dm-car {
 		&.current {
 			left: 0;
 			@include transition(left 500ms ease-out);
+			z-index: 100;
 			
 		}
 		&.next {
 			left: 600px;
+			z-index: 10;
 		}
 		
 		&.prev {
 			left: -600px;
 			@include transition(left 500ms ease-out);
+			z-index: 2;
 		}
 	}
 }
@@ -59,6 +62,7 @@ ul.dm-car {
 		font-size: 24px;
 		font-weight: bold;
 		cursor: pointer;
+		z-index: 200;
 		
 		&.dm-car-control-next {
 			right: 0px;

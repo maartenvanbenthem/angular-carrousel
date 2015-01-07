@@ -37,6 +37,11 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 	    	
 	    	if (slides.length > 0) {
 		    	
+		    	angular.element(slides[slides.length-1]).addClass("prev");
+	    	
+		    	var prevImage = angular.element(slides[slides.length-1]).find("img");
+		    	loadImage(prevImage);
+		    	
 		    	angular.element(slides[0]).addClass("current");
 	    	
 		    	var currentImage = angular.element(slides[0]).find("img");
@@ -54,11 +59,13 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 	    		console.log("Go to next slide");
 	    		if(currentIndex < totalSlides-1) {
 		    		currentIndex ++;
-					goToSlide(currentIndex);	
+					
 	    		}
 	    		else {
-		    		console.error('Already showing last');
+		    		currentIndex = 0;
 	    		}
+	    		
+	    		goToSlide(currentIndex);	
 	    		
     		}
     		
@@ -66,12 +73,14 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 	    		
 	    		console.log("Go to previous slide");
 	    		if(currentIndex > 0) {
-		    		currentIndex --;
-					goToSlide(currentIndex);	
+		    		currentIndex --;	
 	    		}
 	    		else {
-		    		console.error('Already showing first');
+		    		currentIndex = slides.length - 1;
+		    		console.log(currentIndex)
 	    		}
+	    		
+	    		goToSlide(currentIndex);	
     		}
     		
     		function goToSlide(index) {
@@ -95,9 +104,19 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 	    			var image = angular.element(slides[index+1]).find("img");
 					loadImage(image);
     			}
+    			else {
+	    			angular.element(slides[0]).addClass("next");
+	    			var image = angular.element(slides[index+1]).find("img");
+					loadImage(image);
+    			}
     			
     			if(index > 0) {
 	    			angular.element(slides[index-1]).addClass("prev");
+	    			var image = angular.element(slides[index-1]).find("img");
+					loadImage(image);
+    			}
+    			else {
+	    			angular.element(slides[slides.length-1]).addClass("prev");
 	    			var image = angular.element(slides[index-1]).find("img");
 					loadImage(image);
     			}
