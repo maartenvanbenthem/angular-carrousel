@@ -11,6 +11,7 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
     	
 	    	var currentIndex = 0;
 	    	var totalSlides = scope.data.length;
+	    	var animating = false;
 	    		    	
 	    	var tpl = '<ul class="dm-car">';
 	    	
@@ -56,44 +57,67 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 	    		    				
     		scope.goToNext = function() {
 	    		
+	    		var index = currentIndex;
+	    		
 	    		console.log("Go to next slide");
 	    		if(currentIndex < totalSlides-1) {
-		    		currentIndex ++;
+		    		index ++;
 					
 	    		}
 	    		else {
-		    		currentIndex = 0;
+		    		index = 0;
 	    		}
 	    		
-	    		goToSlide(currentIndex);	
+	    		goToSlide(index);	
 	    		
     		}
     		
     		scope.goToPrev = function() {
 	    		
+	    		var index = currentIndex;
+	    		
 	    		console.log("Go to previous slide");
 	    		if(currentIndex > 0) {
-		    		currentIndex --;	
+		    		index --;	
 	    		}
 	    		else {
-		    		currentIndex = slides.length - 1;
+		    		index = slides.length - 1;
 		    		console.log(currentIndex)
 	    		}
 	    		
-	    		goToSlide(currentIndex);	
+	    		goToSlide(index);	
     		}
     		
     		function goToSlide(index) {
     			
     			console.log("Go to slide " + index);
     			
+    			//check if the carrousel already is animating
+    			if(animating) {
+    				console.error("already animating");
+	    			return;
+    			}
+    			else {
+	    			animating = true;
+	    			currentIndex = index;
+    			}
+    			
+    			    			    			
     			//TODO - find a better way to remove class names
     			angular.forEach(slides,function(slide,index){
 	    				angular.element(slide).removeClass("current prev next");
     			})
     			
     			if(index < totalSlides && index >= 0) {
+    				
     				angular.element(slides[index]).addClass("current");
+    				
+    				var current = slides[index];    				
+
+    				current.addEventListener('webkitTransitionEnd', function(){transitionDone()});
+					current.addEventListener('oTransitionEnd', function(){transitionDone()},false);
+					current.addEventListener('webkitTransitionEnd', function(){transitionDone()},false);
+					
     			}
     			else {
 	    			console.error("Image index out of range");
@@ -132,6 +156,18 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 		    	}
 	    		
     		}
+    		
+    		function transitionDone() {
+				
+				animating = false;
+				
+				var current = slides[currentIndex];    			
+				
+				current.removeEventListener('webkitTransitionEnd', function(){transitionDone()});
+				current.removeEventListener('oTransitionEnd', function(){transitionDone()});
+				current.removeEventListener('transitionEnd', function(){transitionDone()});
+				
+			}
     		
     	}
     	
