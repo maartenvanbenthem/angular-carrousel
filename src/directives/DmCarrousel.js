@@ -15,7 +15,7 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 	    	var tpl = '<ul class="dm-car">';
 	    	
 	    	angular.forEach(scope.data,function(image,index) {
-		    	tpl += '<li><div><img dm-src="'+image.path+'" alt="'+image.name+'" /></div></li>';
+		    	tpl += '<li class="dm-car-item"><div><img dm-src="'+image.path+'" alt="'+image.name+'" /></div></li>';
 		    		
 	    	})
 	    	
@@ -30,25 +30,25 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
                 '</div>';
                 
             iElement.append($compile(angular.element(nav))(scope));
-			
-	    	console.log(iElement);
-	    	
+				    	
 	    	var slides = iElement[0].querySelectorAll("li");
 	    	var slides2 = angular.element(iElement[0].querySelectorAll("li"));
 	    	angular.element(iElement[0].querySelector('.current'))
 	    	
-	    	console.log(slides.length);
+	    	if (slides.length > 0) {
+		    	
+		    	angular.element(slides[0]).addClass("current");
 	    	
-	    	slides[0].className = "current";
-	    	
-	    	var currentImage = angular.element(slides[0]).find("img");
-	    	loadImage(currentImage);
-	    		    	
-	    	slides[1].className = "next";
-	    	
-	    	var nextImage = angular.element(slides[1]).find("img");
-	    	loadImage(nextImage);
-	    				
+		    	var currentImage = angular.element(slides[0]).find("img");
+		    	loadImage(currentImage);
+		    		    	
+		    	angular.element(slides[1]).addClass("next");
+		    	
+		    	var nextImage = angular.element(slides[1]).find("img");
+		    	loadImage(nextImage);
+		    		
+	    	}
+	    		    				
     		scope.goToNext = function() {
 	    		
 	    		console.log("Go to next slide");
@@ -84,20 +84,20 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
     			})
     			
     			if(index < totalSlides && index >= 0) {
-    				slides[index].className = "current";
+    				angular.element(slides[index]).addClass("current");
     			}
     			else {
 	    			console.error("Image index out of range");
     			}
     			
     			if(index < totalSlides-1) {
-	    			slides[index+1].className = "next";
+	    			angular.element(slides[index+1]).addClass("next");
 	    			var image = angular.element(slides[index+1]).find("img");
 					loadImage(image);
     			}
     			
     			if(index > 0) {
-	    			slides[index-1].className = "prev";	
+	    			angular.element(slides[index-1]).addClass("prev");
 	    			var image = angular.element(slides[index-1]).find("img");
 					loadImage(image);
     			}
@@ -107,8 +107,9 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
     		function loadImage(element) {
 	    		
 	    		if(element.attr('src') === undefined && element.attr("dm-src") != undefined) {
-	    			console.log("Loading image");
+
 			    	element.attr('src',element.attr("dm-src"));
+			    	
 		    	}
 	    		
     		}

@@ -1,17 +1,11 @@
 appControllers.controller('CarrouselCtrl', ['$scope', 
 	
-	function CarrouselCtrl($scope) {
+	function ($scope) {
 				
 		$scope.imageData = [];
 		
-		generateTestImageData($scope.imageData,4);
-		
-		$scope.testFunction = function (){
-			
-			$scope.test = "test";
-			
-		}
-				
+		generateTestImageData($scope.imageData,8);
+
 		function generateTestImageData(imageDataObject,length) {
 		
 			for (var i=0; i < length; i++) {
