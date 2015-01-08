@@ -4,7 +4,7 @@
   "main": [
   	"/bower_components/dm-angular-carrousel/DmCarrousel.js",
   	"/bower_components/dm-angular-carrousel/dm-carrousel.css"
-  ]
+  ],
   "homepage": "https://github.com/maartenvanbenthem/angular-carrousel",
   "authors": [
     "Maarten van Benthem <maarten@damsko-media.nl>"
