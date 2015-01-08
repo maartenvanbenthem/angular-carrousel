@@ -13,4 +13,6 @@ A lazy loading image carrousel
  - ~~unit tests in karma~~
  - ~~end-to-end tests in protractor~~
  - bower packaging
+ 
+ Demo: http://www.damsko-media.nl/angular-carrousel
 
