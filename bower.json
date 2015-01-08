@@ -13,9 +13,19 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "bower.json",
+    "config.rb",
+    "css",
+    "gulpfile.js",
+    "index.html",
+    "js",
+    "karma.conf.js",
+    "README.md",
+    "sass",
+    "src",
+    "stylesheets",
+    "test"
+    
   ]
 }
