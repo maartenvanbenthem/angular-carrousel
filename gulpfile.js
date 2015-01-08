@@ -5,6 +5,17 @@ var sourcemaps = require('gulp-sourcemaps')
 var uglify = require('gulp-uglify')
 var ngAnnotate = require('gulp-ng-annotate')
  
+gulp.task('jscomponents', function () {
+  gulp.src([
+  	'bower_components/angular/angular.min.js',
+  	'bower_components/angular-touch/angular-touch.js',
+  	'bower_components/angular-animate/angular-animate.js',
+  	'bower_components/angular-route/angular-route.js'
+  ])
+    .pipe(concat('components.js'))
+    .pipe(gulp.dest('js/'))
+})
+
 gulp.task('js', function () {
   gulp.src(['src/**/main.js', 'src/**/module.js', 'src/**/services.js', 'src/**/controllers.js', 'src/**/directives.js', 'src/**/*.js'])
     .pipe(sourcemaps.init())
@@ -30,6 +41,6 @@ gulp.task('watch', ['js','compass'], function () {
   gulp.watch('sass/**/*.scss', ['compass'])
 })
 
-gulp.task('default', ['js','compass'], function() {
+gulp.task('default', ['jscomponents','js','compass'], function() {
 
 });
