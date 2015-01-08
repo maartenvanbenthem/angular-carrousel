@@ -1,0 +1,21 @@
+{
+  "name": "dm-angular-carrousel",
+  "version": "0.0.1",
+  "main": [
+  	"DmCarrousel.js",
+  	"dm-carrousel.css"
+  ]
+  "homepage": "https://github.com/maartenvanbenthem/angular-carrousel",
+  "authors": [
+    "Maarten van Benthem <maarten@damsko-media.nl>"
+  ],
+  "description": "A directive to create an image carrousel",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
