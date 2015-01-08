@@ -59,7 +59,7 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 	    		
 	    		var index = currentIndex;
 	    		
-	    		console.log("Go to next slide");
+	    		//console.log("Go to next slide");
 	    		if(currentIndex < totalSlides-1) {
 		    		index ++;
 					
@@ -76,13 +76,13 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 	    		
 	    		var index = currentIndex;
 	    		
-	    		console.log("Go to previous slide");
+	    		//console.log("Go to previous slide");
 	    		if(currentIndex > 0) {
 		    		index --;	
 	    		}
 	    		else {
 		    		index = slides.length - 1;
-		    		console.log(currentIndex)
+		    		//console.log(currentIndex)
 	    		}
 	    		
 	    		goToSlide(index);	
@@ -90,11 +90,11 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
     		
     		function goToSlide(index) {
     			
-    			console.log("Go to slide " + index);
+    			//console.log("Go to slide " + index);
     			
     			//check if the carrousel already is animating
     			if(animating) {
-    				console.error("already animating");
+    				//console.error("already animating");
 	    			return;
     			}
     			else {
@@ -120,7 +120,7 @@ appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
 					
     			}
     			else {
-	    			console.error("Image index out of range");
+	    			//console.error("Image index out of range");
     			}
     			
     			if(index < totalSlides-1) {
