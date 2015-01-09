@@ -2,8 +2,8 @@
   "name": "dm-angular-carrousel",
   "version": "0.0.1",
   "main": [
-  	"DmCarrousel.js",
-  	"dm-carrousel.css"
+  	"dist/DmCarrousel.js",
+  	"dist/style.css"
   ],
   "homepage": "https://github.com/maartenvanbenthem/angular-carrousel",
   "authors": [
