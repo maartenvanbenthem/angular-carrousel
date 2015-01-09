@@ -1,6 +1,4 @@
-.dm-car-container {
-	position: relative;
-}
+@import "compass/css3/transition";
 
 ul.dm-car {
 	display: block;
@@ -68,3 +66,9 @@ ul.dm-car {
 	}	
 	
 }
+
+.carrousel-container {
+	width: 600;
+	margin: 0px auto;
+}
+

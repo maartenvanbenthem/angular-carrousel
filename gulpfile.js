@@ -36,11 +36,27 @@ gulp.task('compass', function () {
         .pipe(gulp.dest('./stylesheets'));
 });
 
-gulp.task('watch', ['js','compass'], function () {
+gulp.task('bower_dist', function () {
+    gulp.src('./sass/dm-carrousel/*.scss')
+    	.pipe(sourcemaps.init())
+        .pipe(compass({
+	      config_file: './config.rb',
+	      css: 'stylesheets',
+	      sass: 'sass'
+	    }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./dist'));
+    gulp.src(['src/directives/DmCarrousel.js'])
+      .pipe(concat('DmCarrousel.js'))
+    .pipe(gulp.dest('dist/'))
+});
+
+
+gulp.task('watch', ['js','compass','bower_dist'], function () {
   gulp.watch('src/**/*.js', ['js'])
   gulp.watch('sass/**/*.scss', ['compass'])
 })
 
-gulp.task('default', ['jscomponents','js','compass'], function() {
+gulp.task('default', ['jscomponents','js','compass','bower_dist'], function() {
 
 });
