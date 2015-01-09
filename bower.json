@@ -12,11 +12,7 @@
   "description": "A directive to create an image carrousel",
   "license": "MIT",
   "ignore": [
-    "bower_components/angular",
-    "bower_components/angular-animate",
-    "bower_components/angular-mocks",
-    "bower_components/angular-route",
-    "bower_components/angular-touch",
+    "bower_components",
     "bower.json",
     "config.rb",
     "css",
