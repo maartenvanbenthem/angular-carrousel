@@ -2,8 +2,8 @@
   "name": "dm-angular-carrousel",
   "version": "0.0.1",
   "main": [
-  	"angular-carrousel/bower_components/dm-angular-carrousel/DmCarrousel.js",
-  	"angular-carrousel/bower_components/dm-angular-carrousel/dm-carrousel.css"
+  	"bower_components/dm-angular-carrousel/DmCarrousel.js",
+  	"bower_components/dm-angular-carrousel/dm-carrousel.css"
   ],
   "homepage": "https://github.com/maartenvanbenthem/angular-carrousel",
   "authors": [
