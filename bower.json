@@ -2,8 +2,8 @@
   "name": "dm-angular-carrousel",
   "version": "0.0.1",
   "main": [
-  	"bower_components/dm-angular-carrousel/DmCarrousel.js",
-  	"bower_components/dm-angular-carrousel/dm-carrousel.css"
+  	"DmCarrousel.js",
+  	"dm-carrousel.css"
   ],
   "homepage": "https://github.com/maartenvanbenthem/angular-carrousel",
   "authors": [
@@ -11,21 +11,6 @@
   ],
   "description": "A directive to create an image carrousel",
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "bower_components",
-    "bower.json",
-    "config.rb",
-    "css",
-    "gulpfile.js",
-    "index.html",
-    "js",
-    "karma.conf.js",
-    "README.md",
-    "sass",
-    "src",
-    "stylesheets",
-    "test"
-    
+  "ignore": [    
   ]
 }
