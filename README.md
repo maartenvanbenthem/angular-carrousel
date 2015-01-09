@@ -12,10 +12,9 @@ Demo: http://www.damsko-media.nl/angular-carrousel
 Download the directive and the css file and make the available in your Angular application (or install with [Bower](http://bower.io): `bower install dm-angular-carrousel`).
 
 ```
-/bower_components/
-├── dm-angular-carrousel/
-    ├── DmCarrousel.js
-    ├── dm-carrousel.css
+├── DmCarrousel.js
+├── style.css
+
 ```
 
 Create an imageData object in the scope of your application with the image data objects in it like ie.:
@@ -65,7 +64,7 @@ Then place the directive in your HTML and send the imageData object with it:
  	- converting css to js for rotating images?
  - ~~unit tests in karma~~
  - ~~end-to-end tests in protractor~~
- - bower packaging
+ - ~~bower packaging~~
  
 
 
