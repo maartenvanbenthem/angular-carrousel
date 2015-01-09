@@ -45,10 +45,12 @@ gulp.task('bower_dist', function () {
 	      sass: 'sass'
 	    }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./'));
+    gulp.src(['./sass/dm-carrousel/*.scss'])
+        .pipe(gulp.dest('./'));
     gulp.src(['src/directives/DmCarrousel.js'])
       .pipe(concat('DmCarrousel.js'))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('./'))
 });
 
 
