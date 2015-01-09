@@ -1,7 +1,60 @@
 angular-carrousel
 =================
 
-A lazy loading image carrousel
+A real simple lazy loading image carrousel directive for Angular. I made this app as an exersice for setting up an Angular application with unit tests and end to end testing. Also the directive is made available as a Bower package.
+
+Install with [Bower](http://bower.io): `bower install dm-angular-carrousel`.
+
+Demo: http://www.damsko-media.nl/angular-carrousel
+
+## How to use :
+
+Download the directive and the css file and make the available in your Angular application (or install with [Bower](http://bower.io): `bower install dm-angular-carrousel`).
+
+```
+/bower_components/
+├── dm-angular-carrousel/
+    ├── DmCarrousel.js
+    ├── dm-carrousel.css
+```
+
+Create an imageData object in the scope of your application with the image data objects in it like ie.:
+
+```
+var imageData = [
+	{
+        name: "Image 1",
+        path: "http://lorempixel.com/600/300/nature/1"
+    },
+    {
+        name: "Image 2",
+        path: "http://lorempixel.com/600/300/nature/2"
+    },
+    {
+        name: "Image 3",
+        path: "http://lorempixel.com/600/300/nature/3"
+    },
+    {
+        name: "Image 4",
+        path: "http://lorempixel.com/600/300/nature/4"
+    },
+    {
+        name: "Image 5",
+        path: "http://lorempixel.com/600/300/nature/5"
+    },
+    {
+        name: "Image 6",
+        path: "http://lorempixel.com/600/300/nature/6"
+    }
+]
+```
+
+Then place the directive in your HTML and send the imageData object with it:
+
+```
+<dm-carrousel class="dm-carrousel" image-data="imageData"></dm-carrousel>
+```
+
 
 ## Todo :
  - ~~basic setup~~
@@ -14,5 +67,5 @@ A lazy loading image carrousel
  - ~~end-to-end tests in protractor~~
  - bower packaging
  
- Demo: http://www.damsko-media.nl/angular-carrousel
+
 
