@@ -38,17 +38,15 @@ gulp.task('compass', function () {
 
 gulp.task('bower_dist', function () {
     gulp.src('./sass/dm-carrousel/*.scss')
-    	.pipe(sourcemaps.init())
         .pipe(compass({
 	      config_file: './config.rb',
 	      css: 'stylesheets',
 	      sass: 'sass'
 	    }))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./'));
     gulp.src(['./sass/dm-carrousel/*.scss'])
         .pipe(gulp.dest('./'));
-    gulp.src(['src/directives/DmCarrousel.js'])
+    gulp.src(['dist/DmCarrousel.js'])
       .pipe(concat('DmCarrousel.js'))
     .pipe(gulp.dest('./'))
 });

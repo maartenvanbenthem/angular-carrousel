@@ -18,6 +18,7 @@
     "bower.json",
     "config.rb",
     "css",
+    "dist",
     "gulpfile.js",
     "index.html",
     "js",
