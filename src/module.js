@@ -5,5 +5,6 @@ var carrouselApp = angular.module('CarrouselApp', [
 	'appDirectives',
 	'ngRoute',
 	'ngAnimate',
-	'ngTouch'
+	'ngTouch',
+	'dmCarrousel'
 ])

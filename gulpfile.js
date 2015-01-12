@@ -17,7 +17,7 @@ gulp.task('jscomponents', function () {
 })
 
 gulp.task('js', function () {
-  gulp.src(['src/**/main.js', 'src/**/module.js', 'src/**/services.js', 'src/**/controllers.js', 'src/**/directives.js', 'src/**/*.js'])
+  gulp.src(['src/**/main.js', 'src/**/module.js', 'src/**/services.js', 'src/**/controllers.js', 'src/**/directives.js', 'src/**/*.js', 'dist/**/*.js'])
     .pipe(sourcemaps.init())
       .pipe(concat('app.js'))
     .pipe(sourcemaps.write())
