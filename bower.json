@@ -13,7 +13,6 @@
   "description": "A directive to create an image carrousel",
   "license": "MIT",
   "ignore": [
-    "**/.*",
     "bower_components",
     "bower.json",
     "config.rb",
