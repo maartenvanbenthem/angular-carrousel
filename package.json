@@ -1,14 +1,13 @@
 {
   "name": "angular-carrousel",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A lazy loading image carrousel directive for Angular",
   "main": "gulpfile.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "karma start",
-    "test": "protractor conf.js"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -30,6 +29,5 @@
     "karma-chrome-launcher": "~0.1.7"
   },
   "author": "Maarten van Benthem",
-  "license": "ISC",
   "homepage": "https://github.com/maartenvanbenthem/angular-carrousel"
 }
