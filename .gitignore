@@ -1,6 +1,7 @@
 node_modules
 app
 .sass-cache
+npm-debug.log
 
 # OS generated files #
 .DS_Store

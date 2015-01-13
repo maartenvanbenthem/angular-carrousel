@@ -1,8 +1,8 @@
 describe('Unit: DmCarrousel directive', function() {
-  
-	beforeEach(module('CarrouselApp'));
-	
+  	
 	var ctrl, scope, elem;
+	
+	beforeEach(module('dmCarrousel'));
 	
 	beforeEach(inject(function ($rootScope, $compile) {
 	
@@ -27,7 +27,7 @@ describe('Unit: DmCarrousel directive', function() {
 	}));
 
 	it('Should have a list of items with an image in it and a set dm-src attribute for each image object in the image data object', function(){
-		
+				
 		var items = angular.element(elem[0].querySelectorAll('.dm-car-item'));
 				
 		angular.forEach(scope.imageData,function(image,index){

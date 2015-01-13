@@ -3,7 +3,6 @@ var compass = require('gulp-compass');
 var concat = require('gulp-concat')
 var sourcemaps = require('gulp-sourcemaps')
 var uglify = require('gulp-uglify')
-var ngAnnotate = require('gulp-ng-annotate')
  
 gulp.task('jscomponents', function () {
   gulp.src([
@@ -36,19 +35,18 @@ gulp.task('compass', function () {
         .pipe(gulp.dest('./stylesheets'));
 });
 
-gulp.task('bower_dist', function () {
-    gulp.src('./sass/dm-carrousel/*.scss')
+gulp.task('build', function () {
+    gulp.src('dev/sass/*.scss')
         .pipe(compass({
 	      config_file: './config.rb',
-	      css: 'stylesheets',
-	      sass: 'sass'
+	      css: 'dist/stylesheets',
+	      sass: 'dev/sass'
 	    }))
-        .pipe(gulp.dest('./'));
-    gulp.src(['./sass/dm-carrousel/*.scss'])
-        .pipe(gulp.dest('./'));
-    gulp.src(['dist/DmCarrousel.js'])
+	gulp.src(['dev/sass/*.scss'])
+        .pipe(gulp.dest('./dist/sass'));
+    gulp.src(['dev/js/DmCarrousel.js'])
       .pipe(concat('DmCarrousel.js'))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./dist/js'))
 });
 
 

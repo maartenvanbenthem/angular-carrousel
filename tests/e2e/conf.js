@@ -1,4 +1,4 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['scenarios.js']
+  specs: ['tests/e2e/scenarios.js']
 };

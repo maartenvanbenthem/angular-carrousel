@@ -1,4 +1,5 @@
-appDirectives.directive('dmCarrousel', ['$compile', function($compile) {
+angular.module('dmCarrousel', [])
+.directive('dmCarrousel', ['$compile', function($compile) {
 
   return {
     restrict: 'E',
