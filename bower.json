@@ -2,9 +2,9 @@
   "name": "dm-angular-carrousel",
   "version": "0.0.2",
   "main": [
-  	"./DmCarrousel.js",
-  	"./style.css",
-  	"./style.scss"
+  	"./dist/js/DmCarrousel.js",
+  	"./dist/css/style.css",
+  	"./dist/sass/style.scss"
   ],
   "homepage": "https://github.com/maartenvanbenthem/angular-carrousel",
   "authors": [
@@ -18,7 +18,7 @@
     "bower.json",
     "config.rb",
     "css",
-    "dist",
+    "dev",
     "gulpfile.js",
     "index.html",
     "js",
@@ -26,7 +26,7 @@
     "sass",
     "src",
     "stylesheets",
-    "test"
+    "tests"
     
   ],
   "dependencies": {
