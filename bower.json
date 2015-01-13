@@ -16,13 +16,10 @@
     "bower_components",
     "bower.json",
     "config.rb",
-    "./css",
     "dev",
     "gulpfile.js",
     "index.html",
-    "./js",
     "karma.conf.js",
-    "./sass",
     "src",
     "stylesheets",
     "tests"
