@@ -9,7 +9,7 @@ Demo: http://www.damsko-media.nl/angular-carrousel
 
 ## How to use :
 
-Download the directive and the css file (or install with [Bower](http://bower.io): `bower install dm-angular-carrousel`) and make the available in your Angular application.
+Download the directive and the css file (or install with [Bower](http://bower.io): `bower install dm-angular-carrousel`) and make it available in your Angular application.
 
 ```
 ├── dist
@@ -55,7 +55,14 @@ var imageData = [
 Then place the directive in your HTML and send the imageData object with it:
 
 ```
-<dm-carrousel class="dm-carrousel" image-data="imageData"></dm-carrousel>
+<dm-carrousel image-data="imageData"></dm-carrousel>
+```
+Make sure you have added the module to your app
+
+```
+var app = angular.module('App', [
+	'dmCarrousel'
+])
 ```
 
 

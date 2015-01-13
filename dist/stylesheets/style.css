@@ -67,9 +67,8 @@ ul.dm-car li.prev {
   right: 0px;
 }
 
-.carrousel-container {
-  width: 600;
-  margin: 0px auto;
+.dm-car-container {
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
