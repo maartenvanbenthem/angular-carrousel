@@ -19,7 +19,7 @@
     "dev",
     "gulpfile.js",
     "karma.conf.js",
-    "node_modules"
+    "node_modules",
     "package.json",
     "tests"
     
