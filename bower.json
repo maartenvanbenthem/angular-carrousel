@@ -1,6 +1,6 @@
 {
   "name": "dm-angular-carrousel",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": [
   	"./dist/js/DmCarrousel.js",
   	"./dist/css/style.css",
