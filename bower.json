@@ -1,6 +1,6 @@
 {
   "name": "dm-angular-carrousel",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": [
   	"./dist/js/DmCarrousel.js",
   	"./dist/css/style.css",
@@ -18,10 +18,9 @@
     "config.rb",
     "dev",
     "gulpfile.js",
-    "index.html",
     "karma.conf.js",
-    "src",
-    "stylesheets",
+    "node_modules"
+    "package.json",
     "tests"
     
   ],
