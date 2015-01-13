@@ -9,11 +9,15 @@ Demo: http://www.damsko-media.nl/angular-carrousel
 
 ## How to use :
 
-Download the directive and the css file and make the available in your Angular application (or install with [Bower](http://bower.io): `bower install dm-angular-carrousel`).
+Download the directive and the css file (or install with [Bower](http://bower.io): `bower install dm-angular-carrousel`) and make the available in your Angular application.
 
 ```
-├── DmCarrousel.js
-├── style.css
+├── dist
+	├── js
+		|── DmCarrousel.js
+├── 
+	├── stylesheets
+		├── style.css
 
 ```
 
