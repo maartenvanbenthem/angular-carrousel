@@ -114,9 +114,9 @@ angular.module('dmCarrousel', [])
     				
     				var current = slides[index];    				
 
-    				current.addEventListener('webkitTransitionEnd', function(){transitionDone()});
-					current.addEventListener('oTransitionEnd', function(){transitionDone()},false);
-					current.addEventListener('webkitTransitionEnd', function(){transitionDone()},false);
+    				angular.element(current).bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
+                			transitionDone();
+              			});
 					
     			}
     			else {
