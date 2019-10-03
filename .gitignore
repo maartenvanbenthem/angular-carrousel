@@ -2,6 +2,7 @@ node_modules
 app
 .sass-cache
 npm-debug.log
+package-lock.json
 
 # OS generated files #
 .DS_Store
@@ -11,3 +12,6 @@ npm-debug.log
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# IDE files
+.idea/*
