@@ -24,8 +24,8 @@ angular.module('dmCarrousel', [])
 	    	tpl += "</ul>";
 	    	
 	    	tpl += '<div class="dm-car-controls">' +
-                '  <div class="dm-car-control dm-car-control-prev" ng-click="goToPrev()"><span>&lsaquo;</span></div>' +
-                '  <div class="dm-car-control dm-car-control-next" ng-click="goToNext()"><span>&rsaquo;</span></div>' +
+                '  <span class="dm-car-control dm-car-control-prev" ng-click="goToPrev()">&lsaquo;</span>' +
+                '  <span class="dm-car-control dm-car-control-next" ng-click="goToNext()">&rsaquo;</span>' +
                 '</div>';
             
             tpl += '</div>'
